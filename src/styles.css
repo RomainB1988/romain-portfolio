@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* ✅ Personnalisation du dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ✅ Mode clair / sombre via le body */
+body {
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: theme("colors.gray.100");
+  color: theme("colors.gray.900");
+}
+
+.dark body {
+  background-color: theme("colors.gray.900");
+  color: theme("colors.gray.100");
+}
+
+html {
+  scroll-behavior: smooth;
+}
