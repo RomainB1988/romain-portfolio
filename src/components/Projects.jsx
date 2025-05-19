@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function Projects() {
   const projects = [
     {
@@ -16,11 +18,11 @@ function Projects() {
       demo: "https://romainb1988.github.io/todo-list-advanced/",
     },
     {
-      title: "Portfolio",
+      title: "Ancien Portfolio",
       description:
         "Ce site que vous visitez actuellement, codé en React & Tailwind.",
-      link: "https://github.com/RomainB1988",
-      image: "/images/portfolio.PNG",
+      link: "https://github.com/RomainB1988/my-portfolio",
+      image: "/images/portfolio1.PNG",
     },
     {
       title: "Dashboard Météo",
@@ -65,9 +67,15 @@ function Projects() {
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="p-6 bg-white dark:bg-gray-900 rounded-xl shadow transition hover:shadow-lg"
+            className="p-6 bg-white dark:bg-gray-900 rounded-xl shadow overflow-hidden cursor-pointer"
+            whileHover={{
+              scale: 1.03,
+              y: -6,
+              boxShadow: "0 12px 24px rgba(0,0,0,0.15)",
+            }}
+            transition={{ type: "spring", stiffness: 220, damping: 20 }}
           >
             <img
               src={project.image}
@@ -98,7 +106,7 @@ function Projects() {
                 </a>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
