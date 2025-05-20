@@ -10,13 +10,13 @@ body {
 }
 
 body {
-  background-color: theme("colors.gray.100");
-  color: theme("colors.gray.900");
+  background-color: #f3f4f6; /* gray.100 */
+  color: #111827;           /* gray.900 */
 }
 
 .dark body {
-  background-color: theme("colors.gray.900");
-  color: theme("colors.gray.100");
+  background-color: #111827; /* gray.900 */
+  color: #f3f4f6;            /* gray.100 */
 }
 
 html {
